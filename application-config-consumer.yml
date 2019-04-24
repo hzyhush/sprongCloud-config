@@ -1,0 +1,29 @@
+﻿spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 80
+
+spring:
+  profiles: dev
+
+eureka:
+  client:
+    register-with-eureka: false #false表示不向注册中心注册自己
+    service-url:
+      #defaultZone: http://localhost:7001/eureka/  #将服务注册到eureka注册中心
+      defaultZone: http://eureka7001.com:7001/eureka/
+---
+server:
+  port: 80
+
+spring:
+  profiles: test
+
+eureka:
+  client:
+    register-with-eureka: false #false表示不向注册中心注册自己
+    service-url:
+      #defaultZone: http://localhost:7001/eureka/  #将服务注册到eureka注册中心
+      defaultZone: http://eureka7002.com:7002/eureka/
