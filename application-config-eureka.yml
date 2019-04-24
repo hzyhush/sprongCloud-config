@@ -4,7 +4,7 @@
 
 ---
 server:
-  port: 8201
+  port: 7001
 
 spring:
   profiles: dev
@@ -21,10 +21,10 @@ eureka:
       #单个配置
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #eureka注册中心访问地址
       #集群配置
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
 ---
 server:
-  port: 8202
+  port: 7002
 
 spring:
   profiles: test
